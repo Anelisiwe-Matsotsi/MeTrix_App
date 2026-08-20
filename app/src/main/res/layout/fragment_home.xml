@@ -33,12 +33,37 @@
         android:layout_height="685dp"
         android:src="@drawable/slip" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="685dp"
+        android:src="@drawable/slip" />
+
     <Button
         android:id="@+id/button"
-        android:layout_width="102dp"
-        android:layout_height="96dp"
+        android:layout_width="69dp"
+        android:layout_height="82dp"
         android:layout_marginLeft="300dp"
         android:layout_marginTop="200dp"
-        android:text="Water" />
+        android:backgroundTint="#36B3CFDC"
+        android:text="." />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="69dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="#36B3CFDC"
+        android:text="." />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="69dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="400dp"
+        android:backgroundTint="#36B3CFDC"
+        android:text="." />
 
 </FrameLayout>
