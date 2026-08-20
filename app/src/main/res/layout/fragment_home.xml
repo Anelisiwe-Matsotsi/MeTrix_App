@@ -7,27 +7,38 @@
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_1" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="685dp"
         android:src="@drawable/base_body_f" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="694dp"
         android:src="@drawable/bra" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="685dp"
         android:src="@drawable/slip" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="102dp"
+        android:layout_height="96dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="200dp"
+        android:text="Water" />
 
 </FrameLayout>
