@@ -162,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/base_body_e" />
+                app:srcCompat="@drawable/hair_1" />
         </RelativeLayout>
     </FrameLayout>
 
@@ -185,7 +185,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/eye5b" />
+                app:srcCompat="@drawable/extention_hair" />
         </RelativeLayout>
     </FrameLayout>
 
@@ -209,7 +209,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/base_body_b" />
+                app:srcCompat="@drawable/hair_3" />
         </RelativeLayout>
     </FrameLayout>
 
@@ -232,7 +232,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/base_body_m" />
+                app:srcCompat="@drawable/hair_bun" />
         </RelativeLayout>
     </FrameLayout>
 
@@ -256,7 +256,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/base_body_c" />
+                app:srcCompat="@drawable/hair_5" />
         </RelativeLayout>
     </FrameLayout>
 
@@ -279,7 +279,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/base_body_g" />
+                app:srcCompat="@drawable/pony_hair" />
         </RelativeLayout>
     </FrameLayout>
 
@@ -303,7 +303,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/base_body_h" />
+                app:srcCompat="@drawable/hair_4" />
         </RelativeLayout>
     </FrameLayout>
 
@@ -326,7 +326,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/base_body_q" />
+                app:srcCompat="@drawable/strips_hair" />
         </RelativeLayout>
     </FrameLayout>
 
