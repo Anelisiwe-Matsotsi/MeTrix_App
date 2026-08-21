@@ -42,10 +42,24 @@
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <!-- Left Profile Card -->
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="63dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="271dp"
+        android:layout_marginTop="423dp"
+        android:background="#60FFFFFF"
+        android:scaleType="fitCenter"
+        android:scaleX="@android:dimen/app_icon_size"
+        android:src="@drawable/arrow_right_45dp_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/profileCard"
-        android:layout_width="120dp"
-        android:layout_height="160dp"
+        android:layout_width="154dp"
+        android:layout_height="147dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
         android:orientation="vertical"
@@ -58,8 +72,8 @@
             app:cardBackgroundColor="#431F1F">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="104dp"
-                android:layout_height="144dp"
+                android:layout_width="139dp"
+                android:layout_height="127dp"
                 android:layout_gravity="center"
                 app:cardBackgroundColor="#69F0EAEA">
 
@@ -69,10 +83,12 @@
                     android:layout_height="40dp"
                     android:fontFamily="@font/robotoslab_extrabold"
                     android:gravity="center"
+                    android:lines="@integer/material_motion_duration_medium_2"
                     android:text="Natty"
                     android:textAllCaps="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textStyle="italic" />
+
             </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -271,15 +287,17 @@
         </RelativeLayout>
     </FrameLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:src="@drawable/arrow_right_24dp_531607_wght400__opsz24"
-        app:backgroundTint="#00FFFFFF"
-        app:fabSize="auto"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="451dp" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="63dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="423dp"
+        android:layout_marginEnd="315dp"
+        android:background="#60FFFFFF"
+        android:scaleType="fitCenter"
+        android:scaleX="@android:dimen/app_icon_size"
+        android:src="@drawable/arrow_left_45dp_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
