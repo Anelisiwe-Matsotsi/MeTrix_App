@@ -271,4 +271,15 @@
         </RelativeLayout>
     </FrameLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/arrow_right_24dp_531607_wght400__opsz24"
+        app:backgroundTint="#00FFFFFF"
+        app:fabSize="auto"
+        tools:layout_editor_absoluteX="270dp"
+        tools:layout_editor_absoluteY="451dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
