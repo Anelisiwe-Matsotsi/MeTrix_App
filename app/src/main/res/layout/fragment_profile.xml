@@ -394,11 +394,20 @@
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="284dp"
-        android:layout_height="239dp"
+        android:layout_width="283dp"
+        android:layout_height="242dp"
         android:src="@drawable/hair_1"
         android:tint="#101010"
         tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="283dp"
+        android:layout_height="236dp"
+        android:src="@drawable/extention_hair"
+        android:tint="#181717"
+        tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="99dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
