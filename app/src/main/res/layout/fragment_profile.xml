@@ -12,7 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/base_body_g"
+        android:src="@drawable/base_body_f"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="parent"
@@ -364,6 +364,7 @@
         android:layout_width="378dp"
         android:layout_height="777dp"
         android:src="@drawable/mouth_9"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="-1dp"
         tools:layout_editor_absoluteY="5dp" />
 
@@ -446,5 +447,21 @@
         android:tint="#B7240C0C"
         tools:layout_editor_absoluteX="-4dp"
         tools:layout_editor_absoluteY="-4dp" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="277dp"
+        android:layout_height="251dp"
+        android:src="@drawable/grin_mouth"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="285dp"
+        android:layout_height="241dp"
+        android:src="@drawable/lipstick6_grin"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="101dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
