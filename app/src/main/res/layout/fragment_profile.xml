@@ -1,4 +1,5 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout"
@@ -7,26 +8,33 @@
     android:background="@drawable/img_1"
     tools:context=".profileFragment">
 
-    <!-- Character Base Layer -->
+
+    <!-- ======================================================== -->
+    <!-- AVATAR BASE LAYERS                                       -->
+    <!-- ======================================================== -->
+
+    <!-- Character base body -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/base_body_f"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView5" />
 
+    <!-- Character top/clothing layer -->
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="381dp"
         android:layout_height="775dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/top2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Character bottom/clothing layer -->
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="0dp"
@@ -36,25 +44,15 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="9dp"
         android:src="@drawable/bottom2"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView2" />
 
-    <!-- Left Profile Card -->
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="63dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="271dp"
-        android:layout_marginTop="423dp"
-        android:background="#60FFFFFF"
-        android:scaleType="fitCenter"
-        android:scaleX="@android:dimen/app_icon_size"
-        android:src="@drawable/arrow_right_45dp_8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- ======================================================== -->
+    <!-- LEFT PROFILE CARD                                        -->
+    <!-- ======================================================== -->
 
     <LinearLayout
         android:id="@+id/profileCard"
@@ -63,14 +61,16 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <!-- Outer card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardBackgroundColor="#431F1F">
 
+            <!-- Inner card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="139dp"
                 android:layout_height="127dp"
@@ -83,6 +83,7 @@
                     android:orientation="vertical"
                     android:padding="6dp">
 
+                    <!-- Profile icon -->
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
@@ -90,14 +91,13 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/account_box_40px" />
 
-                    <!--Name-->
+                    <!-- Profile name -->
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
                         android:fontFamily="@font/robotoslab_extrabold"
-
                         android:text="Natty"
                         android:textAlignment="center"
                         android:textAllCaps="true"
@@ -105,7 +105,7 @@
                         android:textSize="16sp"
                         android:textStyle="italic" />
 
-                    <!--Name-->
+                    <!-- Personality -->
                     <TextView
                         android:id="@+id/tvPersonality"
                         android:layout_width="match_parent"
@@ -114,7 +114,7 @@
                         android:text="Personality: Curious"
                         android:textSize="11sp" />
 
-                    <!--Name-->
+                    <!-- Birthday -->
                     <TextView
                         android:id="@+id/tvBirthday"
                         android:layout_width="match_parent"
@@ -123,7 +123,7 @@
                         android:text="Birthday: 15/09/2003"
                         android:textSize="11sp" />
 
-                    <!--Name-->
+                    <!-- Aspiration -->
                     <TextView
                         android:id="@+id/tvAspiration"
                         android:layout_width="match_parent"
@@ -131,6 +131,7 @@
                         android:fontFamily="@font/robotoslab_medium"
                         android:text="Aspiration: To be rich"
                         android:textSize="11sp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
@@ -138,18 +139,19 @@
 
 
     <!-- ======================================================== -->
-    <!-- RIGHT SIDE 2-COLUMN GRID (FIXED CONSTRAINTS)            -->
+    <!-- RIGHT SIDE HAIR SELECTION GRID                           -->
     <!-- ======================================================== -->
 
     <!-- ROW 1 -->
+
     <FrameLayout
         android:id="@+id/card1"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="85dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -163,16 +165,18 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/hair_1" />
+
         </RelativeLayout>
     </FrameLayout>
+
 
     <FrameLayout
         android:id="@+id/card2"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/card1"
-        app:layout_constraintTop_toTopOf="@id/card1">
+        app:layout_constraintTop_toTopOf="@id/card1"
+        app:layout_constraintStart_toEndOf="@id/card1">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -186,17 +190,20 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/extention_hair" />
+
         </RelativeLayout>
     </FrameLayout>
 
+
     <!-- ROW 2 -->
+
     <FrameLayout
         android:id="@+id/card3"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/card1"
-        app:layout_constraintTop_toBottomOf="@id/card1">
+        app:layout_constraintTop_toBottomOf="@id/card1"
+        app:layout_constraintStart_toStartOf="@id/card1">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -210,16 +217,18 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/hair_3" />
+
         </RelativeLayout>
     </FrameLayout>
+
 
     <FrameLayout
         android:id="@+id/card4"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/card2"
-        app:layout_constraintTop_toBottomOf="@id/card2">
+        app:layout_constraintTop_toBottomOf="@id/card2"
+        app:layout_constraintStart_toStartOf="@id/card2">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -233,17 +242,20 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/hair_bun" />
+
         </RelativeLayout>
     </FrameLayout>
 
+
     <!-- ROW 3 -->
+
     <FrameLayout
         android:id="@+id/card5"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/card3"
-        app:layout_constraintTop_toBottomOf="@id/card3">
+        app:layout_constraintTop_toBottomOf="@id/card3"
+        app:layout_constraintStart_toStartOf="@id/card3">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -257,16 +269,18 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/hair_5" />
+
         </RelativeLayout>
     </FrameLayout>
+
 
     <FrameLayout
         android:id="@+id/card6"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/card4"
-        app:layout_constraintTop_toBottomOf="@id/card4">
+        app:layout_constraintTop_toBottomOf="@id/card4"
+        app:layout_constraintStart_toStartOf="@id/card4">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -280,17 +294,20 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/pony_hair" />
+
         </RelativeLayout>
     </FrameLayout>
 
+
     <!-- ROW 4 -->
+
     <FrameLayout
         android:id="@+id/card7"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/card5"
-        app:layout_constraintTop_toBottomOf="@id/card5">
+        app:layout_constraintTop_toBottomOf="@id/card5"
+        app:layout_constraintStart_toStartOf="@id/card5">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -304,16 +321,18 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/hair_4" />
+
         </RelativeLayout>
     </FrameLayout>
+
 
     <FrameLayout
         android:id="@+id/card8"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/card6"
-        app:layout_constraintTop_toBottomOf="@id/card6">
+        app:layout_constraintTop_toBottomOf="@id/card6"
+        app:layout_constraintStart_toStartOf="@id/card6">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -327,9 +346,30 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/strips_hair" />
+
         </RelativeLayout>
     </FrameLayout>
 
+
+    <!-- ======================================================== -->
+    <!-- AVATAR NAVIGATION BUTTONS                                -->
+    <!-- ======================================================== -->
+
+    <!-- Right arrow -->
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="63dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="271dp"
+        android:layout_marginTop="423dp"
+        android:background="#60FFFFFF"
+        android:scaleType="fitCenter"
+        android:scaleX="@android:dimen/app_icon_size"
+        android:src="@drawable/arrow_right_45dp_8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Left arrow -->
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="63dp"
@@ -340,9 +380,15 @@
         android:scaleType="fitCenter"
         android:scaleX="@android:dimen/app_icon_size"
         android:src="@drawable/arrow_left_45dp_8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+
+    <!-- ======================================================== -->
+    <!-- AVATAR FACIAL FEATURE LAYERS                             -->
+    <!-- ======================================================== -->
+
+    <!-- Eyelashes -->
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="383dp"
@@ -351,6 +397,7 @@
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="-2dp" />
 
+    <!-- Nose -->
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="378dp"
@@ -359,6 +406,7 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="2dp" />
 
+    <!-- Mouth -->
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="378dp"
@@ -368,6 +416,7 @@
         tools:layout_editor_absoluteX="-1dp"
         tools:layout_editor_absoluteY="5dp" />
 
+    <!-- Eyebrows -->
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="271dp"
@@ -376,6 +425,7 @@
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="93dp" />
 
+    <!-- Main hair -->
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="283dp"
@@ -385,6 +435,7 @@
         tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="96dp" />
 
+    <!-- Hair extension -->
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="283dp"
@@ -395,33 +446,7 @@
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="99dp" />
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card_glass_border"
-        android:src="@drawable/self_care_24px"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="24dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card_glass_border"
-        android:src="@drawable/visibility_24px"
-        tools:layout_editor_absoluteX="326dp"
-        tools:layout_editor_absoluteY="24dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card_glass_border"
-        android:src="@drawable/lips_24px"
-        tools:layout_editor_absoluteX="361dp"
-        tools:layout_editor_absoluteY="24dp" />
-
+    <!-- Base eyes -->
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="382dp"
@@ -430,6 +455,7 @@
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="0dp" />
 
+    <!-- Eyelashes / eye overlay -->
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="385dp"
@@ -439,6 +465,7 @@
         tools:layout_editor_absoluteX="-4dp"
         tools:layout_editor_absoluteY="-1dp" />
 
+    <!-- Pupil / eye colour -->
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="384dp"
@@ -448,6 +475,7 @@
         tools:layout_editor_absoluteX="-4dp"
         tools:layout_editor_absoluteY="-4dp" />
 
+    <!-- Grin mouth -->
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="277dp"
@@ -456,6 +484,7 @@
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="96dp" />
 
+    <!-- Lipstick -->
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="285dp"
@@ -463,5 +492,40 @@
         android:src="@drawable/lipstick6_grin"
         tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="101dp" />
+
+
+    <!-- ======================================================== -->
+    <!-- AVATAR CUSTOMIZATION CATEGORY BUTTONS                    -->
+    <!-- ======================================================== -->
+
+    <!-- Hair -->
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_glass_border"
+        android:src="@drawable/self_care_24px"
+        tools:layout_editor_absoluteX="285dp"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <!-- Eyes -->
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_glass_border"
+        android:src="@drawable/visibility_24px"
+        tools:layout_editor_absoluteX="326dp"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <!-- Lips -->
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_glass_border"
+        android:src="@drawable/lips_24px"
+        tools:layout_editor_absoluteX="361dp"
+        tools:layout_editor_absoluteY="24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
