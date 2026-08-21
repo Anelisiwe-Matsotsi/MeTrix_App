@@ -142,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/base_body_v" />
+                app:srcCompat="@drawable/eye5b" />
         </RelativeLayout>
     </FrameLayout>
 
