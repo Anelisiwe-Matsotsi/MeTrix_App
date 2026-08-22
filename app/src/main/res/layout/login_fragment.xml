@@ -171,3 +171,11 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+<!--
+References
+Ali, A., 2025. Simple Login Page in Kotlin Android - For Beginners (Version 3.0) [Source Code] Available at: < https://medium.com/@afifaali931/simple-login-page-in-kotlin-android-for-beginners-6ad8dc25a903 > [Accessed 21 August 2026].
+StackOverflow, 2018. Android TextView drawable, change padding between drawable and text? (Version 3.0) [Source Code] Available at: < https://stackoverflow.com/questions/19362762/android-textview-drawable-change-padding-between-drawable-and-text > [Accessed 21 August 2026].
+Yalmar, S., 2025. A modern Android login screen template built with Kotlin and XML drawables (Version 3.0) [Source Code] Available at: < https://github.com/SujitYalmar/android-login-ui > [Accessed 21 August 2026].
+Zlatoslava, 2020. Android login and signup sample app (Version 3.0) [Source Code] Available at: < https://github.com/zlatoslava/Login-App > [Accessed 21 August 2026].
+
+-->
