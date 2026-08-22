@@ -193,6 +193,7 @@
         android:layout_width="270dp"
         android:layout_height="390dp"
         android:src="@drawable/dress_real"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="80dp"
         tools:layout_editor_absoluteY="311dp" />
 
@@ -201,6 +202,7 @@
         android:layout_width="378dp"
         android:layout_height="790dp"
         android:src="@drawable/shoe_4"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="92dp" />
 
@@ -212,8 +214,8 @@
         android:id="@+id/card6"
         android:layout_width="61dp"
         android:layout_height="69dp"
-        tools:layout_editor_absoluteX="290dp"
-        tools:layout_editor_absoluteY="651dp">
+        tools:layout_editor_absoluteX="336dp"
+        tools:layout_editor_absoluteY="501dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -226,7 +228,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/base_body_g" />
+                android:tint="#3E0606"
+                app:srcCompat="@drawable/auto_stories_40px" />
 
         </RelativeLayout>
     </FrameLayout>
@@ -235,7 +238,7 @@
         android:id="@+id/card5"
         android:layout_width="61dp"
         android:layout_height="69dp"
-        tools:layout_editor_absoluteX="350dp"
+        tools:layout_editor_absoluteX="334dp"
         tools:layout_editor_absoluteY="411dp">
 
         <RelativeLayout
@@ -254,5 +257,23 @@
 
         </RelativeLayout>
     </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="289dp"
+        android:layout_height="262dp"
+        android:src="@drawable/glasses1_pink"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <include
+        android:id="@+id/bottomNavigation"
+        layout="@layout/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

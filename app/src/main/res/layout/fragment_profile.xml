@@ -527,5 +527,15 @@
         android:src="@drawable/lips_24px"
         tools:layout_editor_absoluteX="361dp"
         tools:layout_editor_absoluteY="24dp" />
+    <include
+        android:id="@+id/bottomNavigation"
+        layout="@layout/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

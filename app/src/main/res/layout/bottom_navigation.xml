@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomNavigation"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="100dp"
+    android:background="@drawable/bg_bottom_navigation"
+    android:elevation="12dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+    <!-- HOME -->
+
+    <LinearLayout
+        android:id="@+id/navHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="Home"
+            android:src="@drawable/home_24px"
+            app:tint="#FFF1B5" />
+
+        <TextView
+            android:id="@+id/textHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/robotoslab_black"
+            android:text="Home"
+            android:textColor="#FFF1B5"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+
+    <!-- WARDROBE -->
+
+    <LinearLayout
+        android:id="@+id/navWardrobe"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <ImageView
+            android:id="@+id/iconWardrobe"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="Wardrobe"
+            android:src="@drawable/checkroom_24px"
+            app:tint="#43302E" />
+
+        <TextView
+            android:id="@+id/textWardrobe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/robotoslab_black"
+            android:text="Wardrobe"
+            android:textColor="#43302E"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <!-- JOURNAL -->
+
+    <LinearLayout
+        android:id="@+id/navJournal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <ImageView
+            android:id="@+id/iconJournal"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="Journal"
+            android:src="@drawable/add_notes_24px"
+            app:tint="#43302E" />
+
+        <TextView
+            android:id="@+id/textJournal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/robotoslab_black"
+            android:text="Journal"
+            android:textColor="#43302E"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <!-- CUSTOM -->
+
+    <LinearLayout
+        android:id="@+id/navCustom"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <ImageView
+            android:id="@+id/iconCustom"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="Custom"
+            android:src="@drawable/dresser_24px"
+            app:tint="#43302E" />
+
+        <TextView
+            android:id="@+id/textCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/robotoslab_black"
+            android:text="Custom"
+            android:textColor="#43302E"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
