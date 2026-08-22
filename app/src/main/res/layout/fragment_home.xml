@@ -276,4 +276,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="192dp"
+        android:layout_height="70dp"
+        android:progress="@integer/material_motion_duration_long_2"
+        android:progressDrawable="@drawable/arrow_right_24dp_531607_wght400__opsz24"
+        android:progressTint="#FFC107"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="49dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
