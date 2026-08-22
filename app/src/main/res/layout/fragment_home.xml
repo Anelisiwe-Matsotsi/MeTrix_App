@@ -14,80 +14,200 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/img_6" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="372dp"
+        android:layout_height="826dp"
         android:src="@drawable/base_body_f"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        tools:layout_editor_absoluteY="54dp" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="372dp"
+        android:layout_height="833dp"
         android:src="@drawable/bra"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="51dp" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="372dp"
+        android:layout_height="824dp"
         android:src="@drawable/slip"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        tools:layout_editor_absoluteY="58dp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#36B3CFDC"
-        android:text="."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+    <FrameLayout
+        android:id="@+id/card6"
+        android:layout_width="61dp"
+        android:layout_height="69dp"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="651dp">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        android:backgroundTint="#36B3CFDC"
-        android:text="."
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_glass_border"
+            android:padding="6dp">
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="7dp"
-        android:backgroundTint="#36B3CFDC"
-        android:text="."
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+            <ImageView
+                android:id="@+id/imgItem6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/base_body_g" />
+        </RelativeLayout>
+    </FrameLayout>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="15dp"
-        android:backgroundTint="#36B3CFDC"
-        android:text="."
-        app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+    <FrameLayout
+        android:id="@+id/card5"
+        android:layout_width="61dp"
+        android:layout_height="69dp"
+        tools:layout_editor_absoluteX="350dp"
+        tools:layout_editor_absoluteY="411dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_glass_border"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/imgItem5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:tint="#3E0606"
+                app:srcCompat="@drawable/local_drink_40px" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="383dp"
+        android:layout_height="836dp"
+        android:src="@drawable/dress_5"
+        tools:layout_editor_absoluteX="-7dp"
+        tools:layout_editor_absoluteY="51dp" />
+
+
+
+    <!-- ======================================================== -->
+    <!-- AVATAR FACIAL FEATURE LAYERS                             -->
+    <!-- ======================================================== -->
+
+    <!-- Eyelashes -->
+
+    <!-- Nose -->
+
+    <!-- Mouth -->
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="383dp"
+        android:layout_height="781dp"
+        android:src="@drawable/lash_1"
+        tools:layout_editor_absoluteX="-10dp"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="378dp"
+        android:layout_height="779dp"
+        android:src="@drawable/nose_2"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="112dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="378dp"
+        android:layout_height="777dp"
+        android:src="@drawable/mouth_9"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <!-- Eyebrows -->
+
+    <!-- Main hair -->
+
+    <!-- Hair extension -->
+
+    <!-- Base eyes -->
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="271dp"
+        android:layout_height="253dp"
+        android:src="@drawable/neutro_eyebrows1"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="283dp"
+        android:layout_height="242dp"
+        android:src="@drawable/hair_1"
+        android:tint="#101010"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="283dp"
+        android:layout_height="236dp"
+        android:src="@drawable/extention_hair"
+        android:tint="#101010"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="382dp"
+        android:layout_height="777dp"
+        android:src="@drawable/base_white_eyes"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <!-- Eyelashes / eye overlay -->
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="385dp"
+        android:layout_height="783dp"
+        android:src="@drawable/eyes_lashes1"
+        android:tint="#D1310505"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <!-- Pupil / eye colour -->
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="384dp"
+        android:layout_height="786dp"
+        android:src="@drawable/eye1c"
+        android:tint="#B7240C0C"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="-4dp" />
+
+    <!-- Grin mouth -->
+
+    <!-- Lipstick -->
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="277dp"
+        android:layout_height="351dp"
+        android:src="@drawable/grin_mouth"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="285dp"
+        android:layout_height="341dp"
+        android:src="@drawable/lipstick6_grin"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="180dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
