@@ -10,6 +10,16 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <include
+        android:id="@+id/bottomNavigation"
+        layout="@layout/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +32,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="#08FFFFFF"
             app:menu="@menu/top_app_bar_menu"
-            app:navigationIcon="@drawable/ic_menu"
+            app:navigationIcon="@drawable/breaking_news_40px"
             app:title="MeTrix" />
 
     </com.google.android.material.appbar.AppBarLayout>

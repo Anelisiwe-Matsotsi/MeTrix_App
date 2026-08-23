@@ -32,7 +32,7 @@
             android:layout_height="25dp"
             android:contentDescription="Home"
             android:src="@drawable/home_24px"
-            app:tint="#FFF1B5" />
+            app:tint="#43302E" />
 
         <TextView
             android:id="@+id/textHome"
@@ -41,7 +41,7 @@
             android:layout_marginTop="3dp"
             android:fontFamily="@font/robotoslab_black"
             android:text="Home"
-            android:textColor="#FFF1B5"
+            android:textColor="#43302E"
             android:textSize="11sp" />
 
     </LinearLayout>
