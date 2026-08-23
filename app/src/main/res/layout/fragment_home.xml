@@ -33,7 +33,9 @@
             android:background="#08FFFFFF"
             app:menu="@menu/top_app_bar_menu"
             app:navigationIcon="@drawable/breaking_news_40px"
-            app:title="MeTrix" />
+            app:navigationIconTint="#43302E"
+            app:title="MeTrix"
+            app:titleTextColor="#43302E" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
