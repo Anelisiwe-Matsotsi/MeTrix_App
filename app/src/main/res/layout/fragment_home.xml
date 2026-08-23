@@ -2,18 +2,33 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#81C1DBE8"
     tools:context=".HomeFragment">
 
-    <!-- Background -->
+    <!-- TODO: Update blank fragment layout -->
+
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/img_6" />
+        android:layout_width="416dp"
+        android:layout_height="766dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_10"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="418dp"
+        android:layout_height="882dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_13"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="4dp" />
 
     <!-- ======================================================== -->
     <!-- BODY / CLOTHING                                          -->
@@ -204,93 +219,377 @@
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="92dp" />
 
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="408dp"
+        android:layout_height="236dp"
+        app:cardBackgroundColor="#EBD7D7"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="650dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/noticeBoardContainer"
+        android:layout_width="374dp"
+        android:layout_height="216dp"
+        app:cardBackgroundColor="#7CF8F9FA"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="652dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- HEADER ROW (TITLE + TOGGLE BUTTON) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvNoticeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="HAPPINESS: EXTREMELY DELULU ✨"
+                    android:textColor="#1E293B"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/btnToggleNoticeBoard"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@android:drawable/arrow_up_float"
+                    app:tint="#64748B" />
+            </RelativeLayout>
+
+            <!-- COLLAPSIBLE CONTENT AREA -->
+            <LinearLayout
+                android:id="@+id/layoutCollapsibleContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- PROGRESS BAR -->
+                <ProgressBar
+                    android:id="@+id/progressHappiness"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="8dp"
+                    android:max="100"
+                    android:progress="85"
+                    android:progressDrawable="@android:drawable/progress_horizontal" />
+
+                <!-- HABIT / MOODLET EMOJI GRID -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- MOODLET ITEM 1 -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="4dp"
+                            app:cardBackgroundColor="#E2E8F0"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="😃"
+                                android:textSize="16sp" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- MOODLET ITEM 2 -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="4dp"
+                            app:cardBackgroundColor="#E2E8F0"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="💕"
+                                android:textSize="16sp" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- MOODLET ITEM 3 -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="4dp"
+                            app:cardBackgroundColor="#E2E8F0"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="🛍️"
+                                android:textSize="16sp" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- MOODLET ITEM 4 -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="4dp"
+                            app:cardBackgroundColor="#E2E8F0"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="☕"
+                                android:textSize="16sp" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- MOODLET ITEM 5 -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="4dp"
+                            app:cardBackgroundColor="#E2E8F0"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="🌸"
+                                android:textSize="16sp" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- MOODLET ITEM 6 -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="4dp"
+                            app:cardBackgroundColor="#E2E8F0"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="📷"
+                                android:textSize="16sp" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- MOODLET ITEM 7 -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            app:cardBackgroundColor="#E2E8F0"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="🎬"
+                                android:textSize="16sp" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        app:cardBackgroundColor="#BFFFFFFF"
+        app:cardCornerRadius="70dp"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        app:cardBackgroundColor="#BFFFFFFF"
+        app:cardCornerRadius="70dp"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        app:cardBackgroundColor="#BFFFFFFF"
+        app:cardCornerRadius="70dp"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="524dp" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="92dp"
+        android:layout_height="354dp"
+        android:src="@drawable/blue_lamp"
+        android:tint="#8CE91E63"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="268dp" />
+
     <!-- ======================================================== -->
     <!-- AVATAR OPTION CARDS                                      -->
     <!-- ======================================================== -->
 
-    <FrameLayout
-        android:id="@+id/card6"
-        android:layout_width="61dp"
-        android:layout_height="69dp"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="501dp">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/habitWater"
+        android:layout_width="89dp"
+        android:layout_height="38dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="#BFFFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:strokeColor="#C1DBE8"
+        app:strokeWidth="1.5dp"
+        tools:layout_editor_absoluteX="304dp"
+        tools:layout_editor_absoluteY="372dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/card_glass_border"
-            android:padding="6dp">
-
-            <ImageView
-                android:id="@+id/imgItem6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:tint="#3E0606"
-                app:srcCompat="@drawable/auto_stories_40px" />
-
-        </RelativeLayout>
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/card5"
-        android:layout_width="61dp"
-        android:layout_height="69dp"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="411dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/card_glass_border"
-            android:padding="6dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp">
 
             <ImageView
-                android:id="@+id/imgItem5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:tint="#3E0606"
-                app:srcCompat="@drawable/local_drink_40px" />
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/local_drink_40px"
+                app:tint="#C1DBE8" />
 
-        </RelativeLayout>
-    </FrameLayout>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="6dp"
+                android:text="Drink Water"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="289dp"
-        android:layout_height="262dp"
-        android:src="@drawable/glasses1_pink"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="172dp" />
+    <!-- ======================================================== -->
+    <!-- AVATAR OPTION CARDS                                      -->
+    <!-- ======================================================== -->
 
-    <include
-        android:id="@+id/bottomNavigation"
-        layout="@layout/bottom_navigation"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/habitTeeth"
+        android:layout_width="89dp"
+        android:layout_height="38dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="#BFFFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:strokeColor="#C1DBE8"
+        app:strokeWidth="1.5dp"
+        tools:layout_editor_absoluteX="308dp"
+        tools:layout_editor_absoluteY="476dp">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="192dp"
-        android:layout_height="70dp"
-        android:progress="@integer/material_motion_duration_long_2"
-        android:progressDrawable="@drawable/arrow_right_24dp_531607_wght400__opsz24"
-        android:progressTint="#FFC107"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="49dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp">
 
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="209dp"
-        android:layout_height="449dp"
-        android:src="@drawable/skirt_1"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="335dp" />
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/local_drink_40px"
+                app:tint="#C1DBE8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Brush Teeth"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ======================================================== -->
+    <!-- AVATAR OPTION CARDS                                      -->
+    <!-- ======================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/habitExercise"
+        android:layout_width="88dp"
+        android:layout_height="38dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="#BFFFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:strokeColor="#C1DBE8"
+        app:strokeWidth="1.5dp"
+        tools:layout_editor_absoluteX="304dp"
+        tools:layout_editor_absoluteY="580dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/local_drink_40px"
+                app:tint="#C1DBE8" />
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="6dp"
+                android:text="Cardio"
+                android:textColor="#333333"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
