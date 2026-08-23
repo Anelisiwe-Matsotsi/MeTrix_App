@@ -5,10 +5,27 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#81C1DBE8"
+    android:background="#C1DBE8"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#95C1DBE8">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/material_toolbar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#08FFFFFF"
+            app:menu="@menu/top_app_bar_menu"
+            app:navigationIcon="@drawable/ic_menu"
+            app:title="MeTrix" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
         android:id="@+id/imageView4"
@@ -221,27 +238,28 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="408dp"
-        android:layout_height="236dp"
+        android:layout_width="410dp"
+        android:layout_height="254dp"
+        android:visibility="visible"
         app:cardBackgroundColor="#EBD7D7"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="650dp" />
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="628dp"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/noticeBoardContainer"
-        android:layout_width="374dp"
+        android:layout_width="388dp"
         android:layout_height="216dp"
         app:cardBackgroundColor="#7CF8F9FA"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="652dp">
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="632dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="236dp"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -302,6 +320,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
                         android:orientation="horizontal">
 
                         <!-- MOODLET ITEM 1 -->
@@ -424,6 +443,90 @@
 
                     </LinearLayout>
                 </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="10dp">
+
+                        <View
+                            android:id="@+id/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="358dp"
+                            android:layout_height="34dp"
+                            android:fontFamily="@font/robotoslab_extrabold"
+                            android:text="Natty's To-Do List"
+                            android:textAlignment="center"
+                            android:textColor="#43302E" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="28dp">
+
+                        <View
+                            android:id="@+id/divider3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:text="Drink water" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <View
+                            android:id="@+id/divider4"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:text="Pick an outfit" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:id="@+id/divider5"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:text="Do homework" />
+                    </RelativeLayout>
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -588,8 +691,6 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
