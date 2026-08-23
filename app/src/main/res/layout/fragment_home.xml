@@ -273,6 +273,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:fontFamily="@font/robotoslab_black"
                     android:text="HAPPINESS: EXTREMELY DELULU ✨"
                     android:textColor="#1E293B"
                     android:textSize="12sp"
@@ -309,7 +310,8 @@
                     android:layout_marginBottom="8dp"
                     android:max="100"
                     android:progress="85"
-                    android:progressDrawable="@android:drawable/progress_horizontal" />
+                    android:progressDrawable="@android:drawable/progress_horizontal"
+                    android:progressTint="#00BCD4" />
 
                 <!-- HABIT / MOODLET EMOJI GRID -->
                 <HorizontalScrollView
