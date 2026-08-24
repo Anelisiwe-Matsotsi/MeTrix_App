@@ -326,7 +326,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="6dp"
                     android:fontFamily="@font/robotoslab_extrabold"
-                    android:text="Curating your personal aesthetics!"
+                    android:text="A productive week of balance &amp; design"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp" />
 
@@ -335,7 +335,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotoslab_medium"
                     android:lineSpacingMultiplier="1.4"
-                    android:text="Your journal pages now double as a digital lookbook tracker, matching your daily thoughts with your favorite accessories and creative milestones. Tap any favorite item to update your rotation!"
+                    android:text="• Mood Tracker: Mostly Grateful and Cozy workflows\n• Focus Vibe: Deep work sessions balanced with matcha breaks\n• Favourite accessory: Chunky rings matched with a Boho style vibe."
                     android:textColor="#FBEFEC"
                     android:textSize="11sp" />
 
