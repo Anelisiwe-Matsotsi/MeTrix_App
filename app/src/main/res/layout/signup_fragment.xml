@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/bg_bottom_navigation"
+                android:background="@drawable/round_shape"
                 android:hint="Email Address"
                 android:inputType="textEmailAddress"
                 android:paddingHorizontal="16dp" />
@@ -62,8 +62,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="16dp"
-                android:background="#E8ECEE"
                 android:paddingHorizontal="16dp"
+                android:background="@drawable/round_shape"
                 android:hint="Password"
                 android:inputType="textPassword" />
 
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="16dp"
-                android:background="#E8ECEE"
+                android:background="@drawable/round_shape"
                 android:paddingHorizontal="16dp"
                 android:hint="Birthday: DD/MM/YYYY"
                 android:drawableEnd="@drawable/calender"
