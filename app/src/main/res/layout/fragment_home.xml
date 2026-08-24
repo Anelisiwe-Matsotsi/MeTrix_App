@@ -387,6 +387,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
+                    android:fontFamily="@font/robotoslab_regular"
                     android:text="Natty's curious personality got her wondering why the sky is blue: Apparently it's the sea's fault! Chat with her to know more."
                     android:textColor="#334155"
                     android:textSize="10sp" />
