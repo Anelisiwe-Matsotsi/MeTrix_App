@@ -250,9 +250,9 @@
         app:cardBackgroundColor="#F0F8FF"
         app:cardCornerRadius="16dp"
         app:cardElevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2.5dp"
-        tools:layout_editor_absoluteX="139dp"
         tools:layout_editor_absoluteY="76dp">
 
         <LinearLayout
@@ -271,9 +271,8 @@
                     android:id="@+id/tvSimsNewsHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:fontFamily="@font/robotoslab_extrabold"
-                    android:text="💎 SIM NOTIFICATIONS"
+                    android:text=" Today on: MeTrix NEWS"
                     android:textColor="#0F172A"
                     android:textSize="11sp" />
 
@@ -330,15 +329,8 @@
                     android:max="100"
                     android:progress="75"
                     android:progressDrawable="@android:drawable/progress_horizontal"
-                    android:progressTint="#0284C7" />
+                    android:progressTint="#958705" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Today is 27 degrees 🌞 go see what outfits you can wear."
-                    android:textColor="#475569"
-                    android:textSize="10sp"
-                    android:textStyle="italic" />
             </LinearLayout>
 
             <View
@@ -395,6 +387,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
+                    android:fontFamily="@font/robotoslab_regular"
                     android:text="Natty's curious personality got her wondering why the sky is blue: Apparently it's the sea's fault! Chat with her to know more."
                     android:textColor="#334155"
                     android:textSize="10sp" />
