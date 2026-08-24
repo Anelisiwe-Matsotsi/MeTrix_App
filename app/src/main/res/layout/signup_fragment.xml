@@ -44,7 +44,7 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="Please put all of your information below to create a new account."
-                android:textColor="#565B5D"
+                android:textColor="#000"
                 android:textSize="14sp" />
 
             <EditText
