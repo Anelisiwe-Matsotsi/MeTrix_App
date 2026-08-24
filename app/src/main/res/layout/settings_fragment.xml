@@ -29,7 +29,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/back_arrow"
-                 />
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginBottom="20dp"
             android:text="Manage your personal details and update preferences below."
-            android:textColor="#5B7083"
+            android:textColor="#000"
             android:textSize="15sp"
             android:lineSpacingExtra="2dp" />
 
@@ -73,9 +73,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/round_shape"
             app:cardCornerRadius="14dp"
             app:cardElevation="0dp"
-            app:cardBackgroundColor="#CCFFF1B5"
+
             >
 
             <RelativeLayout
@@ -83,14 +84,14 @@
                 android:layout_height="wrap_content"
                 android:padding="18dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/accountIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/accountArrow"
-                    android:orientation="vertical">
-
-                </LinearLayout>
+                    android:tint="#43302E"
+                    android:src="@drawable/account" />
 
                 <ImageView
                     android:id="@+id/accountArrow"
@@ -104,6 +105,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/accountIcon"
+                    android:layout_marginStart="14dp"
                     android:text="Angela Natty"
                     android:textColor="#16213E"
                     android:textSize="20sp"
@@ -131,10 +135,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/round_shape"
             app:cardCornerRadius="14dp"
-            app:cardElevation="0dp"
-            app:cardBackgroundColor="#CCFFF1B5"
-            >
+            app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -150,10 +153,20 @@
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp">
 
+                    <ImageView
+                        android:id="@+id/languageIcon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/language" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/languageIcon"
+                        android:layout_marginStart="14dp"
                         android:text="Language"
                         android:textColor="#16213E"
                         android:textSize="17sp" />
@@ -198,10 +211,21 @@
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp">
 
+                    <ImageView
+                        android:id="@+id/themeIcon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/themeicon"
+                        android:tint="#43302E"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/themeIcon"
+                        android:layout_marginStart="14dp"
                         android:text="Themes"
                         android:textColor="#16213E"
                         android:textSize="17sp" />
@@ -218,7 +242,7 @@
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:src="@drawable/next"
-                             />
+                            />
 
                     </LinearLayout>
 
@@ -238,10 +262,21 @@
                     android:paddingTop="14dp"
                     android:paddingBottom="14dp">
 
+                    <ImageView
+                        android:id="@+id/notifIcon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/notifications"
+                        android:tint="#43302E"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/notifIcon"
+                        android:layout_marginStart="14dp"
                         android:text="Push Notifications"
                         android:textColor="#16213E"
                         android:textSize="17sp" />
@@ -257,11 +292,6 @@
                         android:trackTint="#0E3A5F" />
 
                 </RelativeLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#EEF1F3" />
 
             </LinearLayout>
 
@@ -284,11 +314,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/round_shape"
             app:cardCornerRadius="14dp"
             app:cardElevation="0dp"
-            app:cardBackgroundColor="#CCFFF1B5"
-            app:strokeColor="#E4E9ED"
-            app:strokeWidth="1dp">
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -304,10 +333,21 @@
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp">
 
+                    <ImageView
+                        android:id="@+id/accessibilityIcon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/access"
+                        android:tint="#43302E"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/accessibilityIcon"
+                        android:layout_marginStart="14dp"
                         android:text="Accessibility"
                         android:textColor="#16213E"
                         android:textSize="17sp" />
@@ -336,43 +376,22 @@
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="Report Bug"
-                        android:textColor="#16213E"
-                        android:textSize="17sp" />
-
                     <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:layout_alignParentEnd="true"
+                        android:id="@+id/bugIcon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/next"
-                         />
-
-                </RelativeLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#EEF1F3" />
-
-                <!-- Rate Metrix Row -->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="18dp"
-                    android:paddingEnd="18dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="16dp">
+                        android:src="@drawable/bug"
+                        android:tint="#43302E"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Rate MeTrix"
+                        android:layout_toEndOf="@id/bugIcon"
+                        android:layout_marginStart="14dp"
+                        android:text="Report Bug"
                         android:textColor="#16213E"
                         android:textSize="17sp" />
 
@@ -391,6 +410,44 @@
                     android:layout_height="1dp"
                     android:background="#EEF1F3" />
 
+                <!-- Rate Metrix Row -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/rateIcon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/rate"
+                        android:tint="#43302E"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/rateIcon"
+                        android:layout_marginStart="14dp"
+                        android:text="Rate MeTrix"
+                        android:textColor="#16213E"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/next"
+                        />
+
+                </RelativeLayout>
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -402,9 +459,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="4dp"
+            android:background="@drawable/round_shape"
             app:cardCornerRadius="14dp"
             app:cardElevation="0dp"
-            app:cardBackgroundColor="#CCFFF1B5"
             >
 
             <TextView
@@ -418,19 +475,17 @@
                 android:textColor="#E85B4E"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?android:attr/selectableItemBackground" />
 
+/>
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
 </ScrollView>
 
-<!--
-References
+    <!--
+    References
 
-Learnoset - Learn Coding Online. 2021. (Version 3) [Source Code] Available at: < https://youtu.be/Px5u3wz3g-U?si=dqJFQCUbPhIRGjoA > [Accessed 23 August 2026]
-Leo, N., 2018. Android: Hex transparency in colors. (Version 3) [Source Code] Available at: < https://nphausg.medium.com/android-hex-transparency-in-colors-722919b0f728 > [Accessed 23 August 2026]
--->
+    Learnoset - Learn Coding Online. 2021. (Version 3) [Source Code] Available at: < https://youtu.be/Px5u3wz3g-U?si=dqJFQCUbPhIRGjoA > [Accessed 23 August 2026]
+    Leo, N., 2018. Android: Hex transparency in colors. (Version 3) [Source Code] Available at: < https://nphausg.medium.com/android-hex-transparency-in-colors-722919b0f728 > [Accessed 23 August 2026]
+    -->
