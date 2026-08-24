@@ -502,6 +502,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="18dp"
                             android:text="Drink water" />
+
+                        <ImageView
+                            android:id="@+id/imageView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/coin" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -520,6 +526,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="18dp"
                             android:text="Pick an outfit" />
+
+                        <ImageView
+                            android:id="@+id/imageView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/coin" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -538,6 +550,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="18dp"
                             android:text="Do homework" />
+
+                        <ImageView
+                            android:id="@+id/imageView23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/coin" />
                     </RelativeLayout>
 
                 </LinearLayout>

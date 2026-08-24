@@ -86,9 +86,9 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/accountArrow">
+                    android:layout_toStartOf="@+id/accountArrow"
+                    android:orientation="vertical">
 
                 </LinearLayout>
 
@@ -98,8 +98,8 @@
                     android:layout_height="20dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/next"
-                    android:rotation="0" />
+                    android:rotation="0"
+                    android:src="@drawable/next" />
 
                 <TextView
                     android:layout_width="wrap_content"
