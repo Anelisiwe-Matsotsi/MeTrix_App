@@ -724,5 +724,13 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="206dp"
+        app:cardBackgroundColor="#BCFFFDFD"
+        app:cardCornerRadius="12dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="78dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
