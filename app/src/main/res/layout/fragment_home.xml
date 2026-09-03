@@ -198,10 +198,8 @@
         android:id="@+id/imageView12"
         android:layout_width="283dp"
         android:layout_height="242dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="96dp"
         android:src="@drawable/hair_1"
-        app:tint="#101010"
+        app:tint="#9C27B0"
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="188dp" />
 
@@ -246,7 +244,7 @@
         android:id="@+id/topNewsBoardContainer"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:cardBackgroundColor="#F0F8FF"
         app:cardCornerRadius="16dp"
         app:cardElevation="10dp"
