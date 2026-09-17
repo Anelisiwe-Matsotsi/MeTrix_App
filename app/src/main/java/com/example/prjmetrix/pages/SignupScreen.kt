@@ -1,10 +1,8 @@
-package com.example.prjmetrix
+package com.example.prjmetrix.pages
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.ui.res.painterResource
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -12,12 +10,17 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
@@ -29,31 +32,28 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.width
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.layout.ContentScale
+import com.example.prjmetrix.R
 
 // Colors matching the XML
-val BgBlue = Color(0xFFC1DBE8)
-val BrandBrown = Color(0xFF43302E)
-val BottomBarYellow = Color(0xFFFFF1B5)
-val DividerGray = Color(0xFFDADFE1)
-val LinkTeal = Color(0xFF0F6E63)
+val SignupIconBg = Color(0xFF0D2A4A)
 
 @Composable
-fun LoginScreen() {
+fun SignupScreen() {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+    var birthday by remember { mutableStateOf("") }
 
     Scaffold(
-        bottomBar = { BottomBar() },
         containerColor = BgBlue
     ) { innerPadding ->
         Column(
@@ -62,7 +62,7 @@ fun LoginScreen() {
                 .padding(innerPadding)
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 24.dp)
-                .padding(top = 48.dp, bottom = 24.dp),
+                .padding(top = 36.dp, bottom = 32.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // Icon placeholder
@@ -71,48 +71,42 @@ fun LoginScreen() {
                     .height(140.dp)
                     .fillMaxWidth(0.4f)
                     .background(BrandBrown)
-                .clip(RoundedCornerShape(8.dp)),
+                    .clip(RoundedCornerShape(8.dp)),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.icon),
                     contentDescription = "App icon",
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.size(80.dp),
                     contentScale = ContentScale.Crop
                 )
             }
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
             Text(
-                text = "Sign in to MeTrix",
+                text = "Create a new account",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 color = BrandBrown
             )
 
-            Spacer(modifier = Modifier.height(4.dp))
-
-            Text(
-                text = "MeTrix is you.",
-                fontSize = 14.sp,
-                color = Color.Black
-            )
-
-            Spacer(modifier = Modifier.height(32.dp))
-
-            // Email label + field
-            Text(
-                text = "Email address",
-                fontWeight = FontWeight.Bold,
-                color = BrandBrown,
-                modifier = Modifier.fillMaxWidth()
-            )
             Spacer(modifier = Modifier.height(8.dp))
+
+            Text(
+                text = "Please put all of your information below to create a new account.",
+                fontSize = 14.sp,
+                color = Color.Black,
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.height(28.dp))
+
+            // Email field
             OutlinedTextField(
                 value = email,
                 onValueChange = { email = it },
-                placeholder = { Text("angela@gmail.com") },
+                placeholder = { Text("Email Address") },
                 shape = RoundedCornerShape(28.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedContainerColor = Color.White,
@@ -126,21 +120,40 @@ fun LoginScreen() {
                     .height(56.dp)
             )
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(16.dp))
 
-            // Password label + field
-            Text(
-                text = "Password",
-                fontWeight = FontWeight.Bold,
-                color = BrandBrown,
-                modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(modifier = Modifier.height(8.dp))
+            // Password field
             OutlinedTextField(
                 value = password,
                 onValueChange = { password = it },
-                placeholder = { Text("********") },
+                placeholder = { Text("Password") },
                 visualTransformation = PasswordVisualTransformation(),
+                shape = RoundedCornerShape(28.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    unfocusedContainerColor = Color.White,
+                    focusedContainerColor = Color.White,
+                    focusedBorderColor = BrandBrown,
+                    cursorColor = BrandBrown
+                ),
+                singleLine = true,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(56.dp)
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Birthday field with trailing calendar icon
+            OutlinedTextField(
+                value = birthday,
+                onValueChange = { birthday = it },
+                placeholder = { Text("Birthday: DD/MM/YYYY") },
+                trailingIcon = {
+                    Icon(
+                        imageVector = Icons.Default.DateRange,
+                        contentDescription = "Pick date"
+                    )
+                },
                 shape = RoundedCornerShape(28.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedContainerColor = Color.White,
@@ -156,30 +169,38 @@ fun LoginScreen() {
 
             Spacer(modifier = Modifier.height(28.dp))
 
-            // Sign in button
+            // Sign up button
             Button(
-                onClick = {  },
-                shape = RoundedCornerShape(28.dp),
+                onClick = { },
+                shape = RoundedCornerShape(8.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = BrandBrown),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(52.dp)
             ) {
                 Text(
-                    text = "Sign in",
+                    text = "Sign up now",
                     color = Color.White,
                     fontWeight = FontWeight.Bold
                 )
             }
 
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(14.dp))
 
-            Text(
-                text = "Forgot password?",
-                color = BrandBrown,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(8.dp)
-            )
+            // Already have an account? Log in
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = "Already have an account?",
+                    color = BrandBrown
+                )
+                Spacer(modifier = Modifier.width(4.dp))
+                Text(
+                    text = "Log in",
+                    fontWeight = FontWeight.Bold,
+                    color = LinkTeal,
+                    modifier = Modifier.padding(4.dp)
+                )
+            }
 
             Spacer(modifier = Modifier.height(24.dp))
 
@@ -199,48 +220,22 @@ fun LoginScreen() {
                 )
             }
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
-            // Google sign in (image placeholder)
+            // Google sign-up image
             Image(
-                //onClick = {  },
-                painter = painterResource(id = R.drawable.gsignin),
-                contentDescription = "Sign in with Google",
+                painter = painterResource(id = R.drawable.gsignup),
+                contentDescription = "Sign up with Google",
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(68.dp)
-                    .padding(top = 20.dp)
+                    .height(48.dp)
             )
         }
     }
 }
 
-@Composable
-fun BottomBar() {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(BottomBarYellow)
-            .padding(vertical = 20.dp),
-        horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(
-            text = "Don't have an account?",
-            color = Color(0xFF1B1F22)
-        )
-        Spacer(modifier = Modifier.width(4.dp))
-        Text(
-            text = "Sign up",
-            fontWeight = FontWeight.Bold,
-            color = LinkTeal,
-            modifier = Modifier.padding(4.dp)
-        )
-    }
-}
-
 @Preview(showBackground = true)
 @Composable
-fun LoginScreenPreview() {
-    LoginScreen()
+fun SignupScreenPreview() {
+    SignupScreen()
 }

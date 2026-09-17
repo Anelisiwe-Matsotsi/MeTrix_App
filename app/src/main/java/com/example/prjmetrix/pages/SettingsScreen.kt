@@ -1,4 +1,4 @@
-package com.example.prjmetrix
+package com.example.prjmetrix.pages
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -36,6 +36,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.prjmetrix.R
 
 // Colors matching the XML
 val SettingsTitle = Color(0xFF16213E)
